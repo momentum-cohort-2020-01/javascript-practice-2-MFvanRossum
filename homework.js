@@ -1,13 +1,42 @@
 // 1. Create a function called "remove" that takes an array and a potential
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
-// in `['Cadence', 'Ordel']`.
-//
+// in `['Cadence', 'Ordel']`.//
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
+const people = ["Cadence", "Ordel", "Marion"]
+
+function remove(arrayNames, name) {
+    if (arrayNames.indexOf(name) === -1) {
+        return arrayNames
+    } else {
+        while (arrayNames.indexOf(name) !== -1) {
+            let idx = arrayNames.indexOf(name)
+            arrayNames.splice(idx, 1)
+        }
+    } return arrayNames
+}
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+
+// arr = [1, 2, 3]
+// newArr = arr.slice()
+// newArr.pop()  should return [1, 2]
+// arr will still return [1, 2, 3]
+
+function remove(arrayNames, name) {
+    let arrayCopy = arrayNames.slice()
+    if (arrayNames.indexOf(name) === -1) {
+        return arrayNames
+    } else {
+        while (arrayCopy.indexOf(name) !== -1) {
+            let idx = arrayCopy.indexOf(name)
+            arrayCopy.splice(idx, 1)
+        }
+    } return arrayCopy
+}
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
