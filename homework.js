@@ -18,6 +18,16 @@ function remove(arrayNames, name) {
     } return arrayNames
 }
 
+// Also works:
+
+// function remove(arrayNames, name) {
+//     while (arrayNames.includes(name)) {
+//         let idx = arrayNames.indexOf(name);
+//         arrayNames.splice(idx, 1);
+//     }
+//     return arrayNames
+// }
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
@@ -37,6 +47,18 @@ function remove(arrayNames, name) {
         }
     } return arrayCopy
 }
+
+// Also works:
+
+// function remove(arrayNames, name) {
+//     let result = [];
+//     for (let item of arrayNames) {
+//         if (item != name) {
+//             result.push(item);
+//         }
+//     }
+//     return result;
+// }
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
@@ -66,6 +88,18 @@ function minimum(numbers) {
         return Math.min(...numbers)
     }
 }
+
+// Also works:
+
+// function minimum(numbers) {
+//     let smallestNumber = numbers[0];
+//     for (let number of numbers) {
+//         if (number < smallestNumber) {
+//             smallestNumber = number 
+//         }
+//     }
+//     return smallestNumber;
+// }
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
