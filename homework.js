@@ -116,3 +116,10 @@ function selectionSort(numbers) {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+function textList(people) {
+   var newArray = [];
+   if(people.filter(people => typeof people === 'string' && people.length > 0)) {
+       people.concat(newArray);
+   } return people
+}
